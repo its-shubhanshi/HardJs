@@ -1,0 +1,150 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Dark mode body */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #121212;
+  color: #f5f5f5;
+  padding: 20px;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffcc70;
+  text-shadow: 0 0 10px rgba(255, 204, 112, 0.6);
+}
+button {
+  background-color: green;
+  color: white;
+  margin-bottom: 50px;
+  padding: 10px 20px;
+  border: none;
+  text-align: center;
+  font-size: 25px;
+}
+
+/* Product list layout */
+#productList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Product card */
+.card {
+  background: linear-gradient(145deg, #1c1c1c, #2b2b2b);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  padding: 18px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(255, 204, 112, 0.4);
+}
+
+/* Product image with Blue Neon Glow */
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px rgba(0, 140, 255, 0.6); /* Neon Blue glow */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 140, 255, 0.9), 0 0 50px rgba(0, 140, 255, 0.6); /* Stronger neon */
+}
+
+/* Product name */
+.card h3 {
+  font-size: 1rem;
+  color: #ffcc70;
+  margin-bottom: 8px;
+}
+
+/* Product price */
+.card p {
+  font-size: 1rem;
+  color: #b0b0b0;
+  margin: 0;
+}
+
+/* Error message */
+.error {
+  color: #ff6b6b;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+
+.card p.description {
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 10px 0;
+  max-height: 0;                 /* start me collapsed */
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.6s ease;  /* smooth slide */
+}
+
+/* collapsed state pe thoda text dikhane ke liye */
+.card p.description:not(.expanded) {
+  max-height: 50px;              /* default short view */
+}
+
+/* expanded state */
+.card p.description.expanded {
+  max-height: 500px;             /* expand hone par pura text */
+}
+
+/* gradient overlay jab cut ho */
+.card p.description::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
+  background: linear-gradient(to top, #1c1c1c, transparent);
+  pointer-events: none;
+}
+
+/* jab expand ho to overlay hata do */
+.card p.description.expanded::after {
+  display: none;
+}
+
+/* Read More button */
+.read-more {
+  display: inline-block;
+  margin-top: 8px;
+  color: #00aaff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.read-more:hover {
+  color: #33ccff;
+}
