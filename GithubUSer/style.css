@@ -1,0 +1,161 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0d1117;
+  color: #c9d1d9;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #58a6ff;
+  text-shadow: 0 0 10px rgba(88, 166, 255, 0.6);
+}
+
+/* Input + Button */
+#main {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  width: 220px;
+  background: #161b22;
+  color: #fff;
+}
+
+button {
+  padding: 10px 18px;
+  background: #238636;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #2ea043;
+  transform: translateY(-2px);
+}
+
+/* Result Card */
+#result {
+  margin-top: 30px;
+  display: block;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#result .card {
+  background: linear-gradient(145deg, #161b22, #21262d);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  width: 280px;
+  box-shadow: 0 0 20px rgba(0, 140, 255, 0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#result .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 35px rgba(0, 140, 255, 0.9);
+}
+
+#result img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #58a6ff;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px rgba(0, 140, 255, 0.7);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#result img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 140, 255, 0.9), 0 0 50px rgba(0, 140, 255, 0.6);
+}
+
+#result h2 {
+  margin: 10px 0 5px;
+  color: #fff;
+}
+
+#result p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #8b949e;
+}
+
+#result a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #58a6ff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+#result a:hover {
+  background: #1f6feb;
+}
+
+.error {
+  color: #f85149;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Loader spinner */
+.loader {
+  border: 6px solid #161b22;
+  border-top: 6px solid #58a6ff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 40px auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive for small screens */
+@media (max-width: 600px) {
+  #main {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input {
+    width: 100%;
+  }
+  #result .card {
+    width: 90%;
+  }
+}
