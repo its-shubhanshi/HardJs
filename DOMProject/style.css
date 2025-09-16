@@ -1,7 +1,7 @@
 :root {
   --pri: #00215e;
   --sec: #2c4e80;
-  --tri1: #a52f08;
+  --tri1: #481402;
   --tri2: #ffc55a;
 }
 
@@ -12,7 +12,7 @@
   padding: 0;
   --webkit-box-sizing: border-box;
   box-sizing: border-box;
-  color: var(--pri);
+  color: var(--tri2);
 }
 
 @font-face {
@@ -51,12 +51,6 @@ h1 {
   color: var(--tri2);
 }
 
-nav {
-  width: 100%;
-  height: 60px;
-  background-color: var(--tri1);
-  position: fixed;
-}
 section.allElems {
   height: 100%;
   width: 100%;
@@ -104,3 +98,57 @@ section.allElems {
 .elem:active {
   scale: 0.97;
 }
+
+.fullElem {
+  height: 100%;
+  width: 100%;
+  background-color: var(--sec);
+  padding: 40px;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  display: none;
+}
+
+.back {
+  position: absolute;
+  right: 5%;
+  background-color: red;
+  color: #ffc55a;
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.back:active {
+  scale: 0.97;
+}
+
+.todo-list-fullpage h2 {
+  font-size: 50px;
+}
+.todo-list-fullpage .todo-container {
+  height: 80%;
+  width: 100%;
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: var(--tri1);
+}
+.todo-list-fullpage .todo-container .addTask {
+  width: 33%;
+  background-color: var(--tri2);
+  height: 100%;
+  border-radius: 20px;
+}
+
+
