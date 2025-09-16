@@ -1,0 +1,106 @@
+:root {
+  --pri: #00215e;
+  --sec: #2c4e80;
+  --tri1: #a52f08;
+  --tri2: #ffc55a;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  --webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: var(--pri);
+}
+
+@font-face {
+  font-family: aeonik;
+  font-weight: 200;
+  src: url(./fonts/AeonikTRIAL-Light.otf);
+}
+@font-face {
+  font-family: aeonik;
+  font-weight: 500;
+  src: url(./fonts/AeonikTRIAL-Regular.otf);
+}
+@font-face {
+  font-family: aeonik;
+  font-weight: 700;
+  src: url(./fonts/AeonikTRIAL-Bold.otf);
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  font-family: aeonik, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 200;
+}
+
+#main {
+  width: 100%;
+  height: 120%;
+  background: var(--sec);
+}
+h1 {
+  font-weight: 700;
+  color: var(--tri2);
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  background-color: var(--tri1);
+  position: fixed;
+}
+section.allElems {
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  overflow: auto;
+  position: absolute;
+}
+.allElems .allFeatures {
+  display: --webkit-box;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+.elem {
+  height: 400px;
+  width: 330px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+.elem img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.elem h2 {
+  position: absolute;
+  bottom: 4%;
+  font-weight: 500;
+  font-size: 33px;
+  right: 5%;
+}
+.elem:active {
+  scale: 0.97;
+}
