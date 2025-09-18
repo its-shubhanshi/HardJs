@@ -47,8 +47,7 @@ body {
 
 #main {
   max-width: 1200px;
-  height: 100%;
-  background-color: red;
+  height: 120%;
 }
 h1 {
   font-weight: 700;
@@ -59,7 +58,6 @@ section.allElems {
   height: 100%;
   width: 100%;
   padding: 40px;
-  overflow: auto;
   position: absolute;
 }
 .allElems .allFeatures {
@@ -71,11 +69,13 @@ section.allElems {
   -ms-flex-align: start;
   display: flex;
   align-items: flex-start;
-  gap: 40px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 20px;
 }
 .elem {
-  height: 400px;
-  width: 330px;
+  height: 250px;
+  width: 185px;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
@@ -96,8 +96,9 @@ section.allElems {
   position: absolute;
   bottom: 4%;
   font-weight: 500;
-  font-size: 33px;
+  font-size: 23px;
   right: 5%;
+  white-space: pre;
 }
 .elem:active {
   scale: 0.97;
@@ -107,9 +108,10 @@ section.allElems {
   height: 100%;
   width: 100%;
   background-color: var(--sec);
-  padding: 40px;
+  padding: 20px;
   position: absolute;
   top: 0;
+  bottom: 0;
   z-index: 999;
   display: none;
 }
@@ -131,7 +133,7 @@ section.allElems {
 }
 
 .todo-list-fullpage h2 {
-  font-size: 40px;
+  font-size: 32px;
 }
 .todo-list-fullpage .todo-container {
   height: 100%;
@@ -231,16 +233,17 @@ section.allElems {
   justify-content: space-between;
   width: 100%;
   background-color: var(--tri2);
-  padding: 15px 30px;
-  margin-bottom: 10px;
+  padding: 10px 20px;
+  margin-bottom: 15px;
   border-radius: 10px;
 }
 .task h5 {
   color: var(--pri);
-  font-size: 30px;
+  font-size: 22px;
   display: flex;
-  align-items: flex-start;
-  gap: 10px;
+  align-items: center;
+  gap: 5px;
+  white-space: pre;
 }
 
 .task h5 span {
@@ -257,7 +260,7 @@ section.allElems {
   opacity: 0;
 }
 .task button {
-  padding: 15px 30px;
+  padding: 10px 20px;
   color: var(--tri2);
   background-color: var(--green);
   font-size: 18px;
@@ -265,10 +268,10 @@ section.allElems {
   border: none;
   font-weight: 600;
 }
-.task button:active{
+.task button:active {
   scale: 0.96;
 }
-.mark-imp{
+.mark-imp {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -277,9 +280,79 @@ section.allElems {
   width: 100%;
   gap: 20px;
 }
-.mark-imp input{
-  scale:1.7;
+.mark-imp input {
+  scale: 1.7;
 }
-.mark-imp label{
+.mark-imp label {
   font-size: 21px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px; /* scrollbar ki width */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--tri2); /* track (piche ka bg) */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--pri),
+    var(--sec)
+  ); /* handle ka color */
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    var(--green),
+    var(--red)
+  ); /* hover effect */
+}
+
+.daily-planner-fullpage h2 {
+  font-size: 32px;
+}
+
+.daily-planner-fullpage .day-planner {
+  background-color: var(--pri);
+  height: 85%;
+  margin-top: 40px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: auto;
+}
+.day-planner .day-planner-time {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 49%;
+  margin-bottom: 15px;
+}
+
+.day-planner .day-planner-time p {
+  position: absolute;
+  top: 12%;
+  left: 2%;
+  color: var(--tri2);
+  font-size: 16px;
+}
+
+.day-planner .day-planner-time input {
+  padding: 20px 45px;
+  width: 100%;
+  background-color: var(--sec);
+  border-radius: 5px;
+  border: none;
+  font-size: 35px;
+  padding-top: 34px;
+  outline: none;
 }
