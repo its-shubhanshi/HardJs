@@ -5,11 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="main">
-      <nav></nav>
+      <nav>
+        <div class="nav-in">
+          <div>
+            <h2>Productivity Dashboard</h2>
+          </div>
+
+          <div class="theme">
+            <i class="ri-sun-line"></i>
+          </div>
+        </div>
+      </nav>
       <section class="allElems">
+        <header>
+          <div class="header1">
+            <h2>20 April 2025</h2>
+            <h1>Saturday, 1:00 pm</h1>
+            <h4>Lucknow (UP)</h4>
+          </div>
+          <div class="header2">
+            <h2>20°C</h2>
+            <h4>Light Rain</h4>
+            <h3 class="precipitration">Precipitration :35%</h3>
+            <h3 class="humidity">Humidity : 49%</h3>
+            <h3 class="wind">Wind : 10 km/h</h3>
+          </div>
+        </header>
         <div class="allFeatures">
           <div class="todo elem" id="0">
             <img
@@ -43,7 +71,7 @@
 
             <h2>Pomodoro Timer</h2>
           </div>
-          <div class="goals elem" id="4">
+          <div class="goal elem" id="4">
             <img
               src="https://images.unsplash.com/photo-1718202248232-0cdbc15d29b2?q=80&w=3928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
@@ -134,6 +162,28 @@
       <section class="fullElem daily-goals-fullpage">
         <button class="back" id="4">close</button>
         <h1>Daily Goals</h1>
+        <div class="goals-container">
+          <div class="addGoals">
+            <form>
+              <input type="text" id="goals-input" placeholder="Enter Goals" />
+              <textarea
+                rows="5"
+                cols="30"
+                placeholder="Enter Details"
+                name=""
+                id=""
+              ></textarea>
+              <div class="mark-imp">
+                <input type="checkbox" name="" id="check" />
+                <label for="check">Mark as a Important!</label>
+              </div>
+              <button type="submit">Add Goals</button>
+            </form>
+          </div>
+          <div class="allGoals">
+            <div class="goals"></div>
+          </div>
+        </div>
       </section>
     </div>
 
