@@ -1,34 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  let n=1;
+  let str="Prachi";
+  let b=true;
+  let nu=null;
+  let un=undefined;
+  let arr=["hello",12,undefined,null,true,false,"Prachi",<h1>Hey</h1>]
+  let obj={name:"Sarthak",age:20}
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <h1>DataTypes </h1>
+      <h2>Number : {n}</h2>
+      <h2>String : {str}</h2>
+      <h2>Boolean : {b?"Hello":"not hello"}</h2>
+      <h2>Null : {nu}</h2>
+      <h2>Undefined : {un}</h2>
+      <h2>Array : {arr}</h2>
+      <h2>Object : {obj.name}</h2>
+      <h2>Object : {obj.age}</h2>
+    
+    </div>
   )
 }
 
