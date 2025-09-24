@@ -5,8 +5,8 @@ const EventRender = () => {
 
   let handleClick = () => {
     setUserName("Ankit");
-    console.log(username);
-  };
+};
+console.log(username);
   return (
     <div>
       <h1>Username</h1>
