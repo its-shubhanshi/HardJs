@@ -1,4 +1,6 @@
 import './App.css'
+import EventRender from './EventRender';
+import MapRender from './MapRender';
 
 function App() {
   let n=1;
@@ -6,8 +8,8 @@ function App() {
   let b=true;
   let nu=null;
   let un=undefined;
-  let arr=["hello",12,undefined,null,true,false,"Prachi",<h1>Hey</h1>]
-  let obj={name:"Sarthak",age:20}
+  let arr=["hello",12,undefined,null,true,false,"Prachi"]
+  //let obj={name:"Sarthak",age:20}
 
   return (
     <div>
@@ -18,8 +20,10 @@ function App() {
       <h2>Null : {nu}</h2>
       <h2>Undefined : {un}</h2>
       <h2>Array : {arr}</h2>
-      <h2>Object : {obj.name}</h2>
-      <h2>Object : {obj.age}</h2>
+
+      <MapRender/>
+      <EventRender/>
+      
     
     </div>
   )
