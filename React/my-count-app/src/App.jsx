@@ -3,16 +3,13 @@ import React, { useState } from "react";
 const App = () => {
   let [num, setNum] = useState(0);
   let Increment = () => {
-    ++num;
-    setNum(num);
+    setNum(num+1);
   };
   let Decreement = () => {
     if (num > 0) {
-      num--;
-      setNum(num);
+      setNum(num-1);
     }
   };
-  console.log(num);
 
   return (
     <div>
