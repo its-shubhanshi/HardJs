@@ -16,6 +16,7 @@ function App() {
       <form onSubmit={handleSubmit}>
         <input type="text" value={name} onChange={(e)=>setName(e.target.value)}  id="nameInput" placeholder="Enter your name"/>
         <input type="text" value={age} onChange={(e)=>setAge(e.target.value)}  id="ageInput" placeholder="Enter your Age"/>
+       
         <button type="submit">Submit</button>
       </form>
     </>
