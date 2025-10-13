@@ -17,18 +17,15 @@ const Create = (props) => {
     setTasks([...tasks, newTask]);
     setTitle("");
   };
-  const buttonCss = {
-    color: "white",
-    padding: "5px 20px",
-    backgroundColor: "green",
-    border: "1px solid white",
-  };
 
   return (
-    <>
-      <h2>Create Task</h2>
+    <div className="w-[60%] p-10">
+      <h1 className="mb-10 text-5xl font-thin">
+        Set <span className="text-red-500">Reminders</span>
+      </h1>
       <form onSubmit={submithandler}>
         <input
+          className="border-b w-full font-thin text-2xl p-2 outline-0"
           type="text"
           id="title"
           required
@@ -36,16 +33,14 @@ const Create = (props) => {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <br />
-        <br />
-        <button style={buttonCss} type="submit">
+        <button
+          className="text-xl px-10 py-2 mt-8 border rounded"
+          type="submit"
+        >
           Add task
         </button>
-        <br />
-        <br />
       </form>
-      <hr />
-    </>
+    </div>
   );
 };
 

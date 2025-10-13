@@ -11,31 +11,28 @@ const RenderTask = (props) => {
   };
   const renderTask = tasks.map((task) => {
     return (
-      <li className={style.list_style} key={task.id}>
-        {task.title}{" "}
-        <span
-          style={{
-            padding: "4px 12px",
-            color: "tomato",
-            border: "2px solid tomato",
-            borderRadius: "5px",
-            cursor: "pointer",
-          }}
+      <li
+        className={`${style.list_style} mb-2 flex justify-between items-center p-4 bg-gray-900 rounded`}
+        key={task.id}
+      >
+        <span className="text=xl font-thin">{task.title}</span>
+        <button
+          className="text-sm font-thin text-red-400"
           onClick={() => deleteHandler(task.id)}
         >
           Delete
-        </span>
+        </button>
       </li>
     );
   });
 
   return (
-    <>
-      <div>
-        <h2 style={{ color: "aqua" }}>Pending Task ...</h2>
-        <ol>{renderTask}</ol>
-      </div>
-    </>
+    <div className="w-[40%] p-10">
+      <h1 className="mb-10 text-5xl font-thin text-pink-600">
+        Pending Task ...
+      </h1>
+      <ol>{renderTask}</ol>
+    </div>
   );
 };
 
