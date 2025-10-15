@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const RenderTask = (props) => {
   const todos = props.todos;
@@ -7,6 +8,7 @@ const RenderTask = (props) => {
     console.log("Delete", id);
     const filterTodo = todos.filter((task) => task.id != id);
     setTodos(filterTodo);
+    toast.error("Todo Deleted");
   };
   const renderTask = todos.map((task) => {
     return (
